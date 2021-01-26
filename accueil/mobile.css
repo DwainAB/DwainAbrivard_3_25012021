@@ -3,10 +3,13 @@ body
     margin: 0%;
 }
 
-
-
 i{
     margin-right: 4%;
+}
+
+a{
+    text-decoration: none;
+    color: black;
 }
 
 /*header*/
