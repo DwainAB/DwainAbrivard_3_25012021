@@ -1,18 +1,22 @@
 body{
-    background-image: url('images/restaurants/a-la-francaise.jpg');
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position-y: 10vw;
     margin: 0%;
+}
+
+header img{
+    max-width: 100%;
+    max-height: 32rem;
+    width: 100%;
+    object-fit: cover;
 }
 
 p{
     font-family: 'Roboto', sans-serif;
+    font-size: 1em;
 }
 
 /*header de la page*/
 header{
-    display: flex;
+    position: relative;
 }
 
 header a{
@@ -22,13 +26,18 @@ header a{
 
 header h1{
     margin: 0%;
-    width: 99vw;
+    font-size: 2em;
+    text-align: center;
 }
 
-header h1 i{
+header i{
     margin: 0%;
     margin-right: 18vw;
     margin-left: 8vw;
+    position: absolute;
+    font-size: 2em;
+    top: 7px;
+    left: 2%;
 }
 
 /*contenu principal*/
@@ -40,13 +49,16 @@ main{
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
     padding-top: 3%;
+    padding-bottom: 40px;
+    position: relative;
+    margin-top: -4rem;
 }
 
 /* titre principal*/
 
 h1{
 font-family: 'Shrikhand', cursive;
-font-size: 7vw;
+font-size: 2em;
 margin-left: 5%;
 }
 
@@ -58,10 +70,18 @@ h1 i{
 
 .main_title{
     margin-left: 5%;
-    font-size: 4vw;
+    font-size: 1em;
     border-bottom: 3px solid #99E2D0;
     width: 11%;
     padding-bottom: 5px;
+}
+
+.main_heart{
+    position: absolute;
+    font-size: 2em;
+    top: 37px;
+    right: 7%;
+    border: 0px solid;
 }
 
 /*repas*/
@@ -99,14 +119,14 @@ h1 i{
 
 /*btn commander*/
 
-button{
+.main_validate{
     width: 43vw;
     display: block;
     margin: auto;
     background: linear-gradient(#FF79DA,#9356DC);
     color: white;
-    font-size: 4vw;
-    padding: 3%;
+    font-size: 1.5em;
+    padding: 12px;
     border-radius: 25px;
     border: #f6f6f6;
     box-shadow: 1px 1px 10px grey;
@@ -115,7 +135,6 @@ button{
 /*pied de page*/
 
 footer{
-    margin-top: 50px;
     background-color: #353535;
     padding-left: 5%;
     padding-top: 5%;
@@ -125,7 +144,7 @@ footer h2{
     font-family: 'shrikhand';
     font-weight:lighter;
     color: white;
-    font-size: 5vw;
+    font-size: 1.5em;
     margin: 0%;
 }
 
@@ -137,10 +156,33 @@ footer ul li{
     list-style-type: none;
     color: white;
     margin-top: 10px;
-    font-size: 4vw;
+    font-size: 1em;
 }
 
 footer i{
     margin-right: 10px;
+}
+
+@media screen and (min-width: 1024px)
+{
+   .choice{
+       display: flex;
+       flex-wrap: wrap;
+   }
+
+   .starters_meal, .course_meal, .dessert_meal{
+    width: 29vw;
+    margin-left: 36px;
+    height: 87px;
+   }
+
+   .starters_meal :nth-child(1), .course_meal :nth-child(1), .dessert_meal :nth-child(1){
+       margin-top: 10px;
+   }
+
+   .meal{
+       width: 24vw;
+       margin-top: 0%;
+   }
 }
 
