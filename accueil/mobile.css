@@ -16,7 +16,7 @@ a{
 
 .header_logo img{
     display: block;
-    width: 45vw;
+    width: 11em;
     margin: auto;
     padding: 2%;
 }
@@ -29,7 +29,7 @@ header p{
     text-align: center;
     margin: 0%;
     box-shadow: inset 0px 0px 5px;
-    font-size: 4vw;
+    font-size: 1.2em;
 }
 
 /*presentation*/
@@ -41,14 +41,14 @@ header p{
 }
 
 .presentation h2{
-    font-size: 8vw;
+    font-size: 2em;
     width: 80%;
     text-align: center;
     margin: auto;
 }
 
 .presentation p{
-    font-size: 5vw;
+    font-size: 1.5em;
     text-align: center;
 }
 
@@ -60,8 +60,8 @@ header p{
     display: block;
     margin: auto;
     margin-top: 30px;
-    font-size: 4vw;
-    padding: 3%;
+    font-size: 1.2em;
+    padding: 15px;
     border-radius: 25px;
     color: white;
     border: #f6f6f6;
@@ -71,13 +71,13 @@ header p{
 /*fonctionnement*/
 
 .function h2{
-font-size: 6vw;
+font-size: 2em;
 margin-left: 5%;
 }
 
 .function ul{
-    
-    padding: auto;
+    padding: 0%;
+    margin-left: 10%;
 }
 
 .function ul li{
@@ -85,16 +85,16 @@ margin-left: 5%;
     border-radius: 20px;
     background-color: #f6f6f6;
     box-shadow: 1px 1px 10px lightgray;
-    font-size: 4vw;
+    font-size: 1em;
     text-align: center;
     width: 70vw;
-    padding: 5%;
+    padding: 23px;
     margin-top:30px ;
     position: relative;
 }
 
 .function ul li i{
-    margin-right: 15%;
+    margin-right: 32px;
 }
 
 .function li p{
@@ -112,9 +112,17 @@ margin-left: 5%;
 
 /*restaurant*/
 
+#restaurant{
+    background-color: #f6f6f6;
+    width: 100%;
+    margin-top: 50px;
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
 #restaurant h2{
     margin-left: 5%;
-    font-size: 6vw;
+    font-size: 2em;
 }
 
 #restaurant figure{
@@ -133,7 +141,8 @@ margin-left: 5%;
     border-top-right-radius: 30px;
     width: 90vw;
     max-height: 200px;
-    
+    object-fit: cover;
+    height: 32vw;
 }
 
 #restaurant h3, #restaurant p{
@@ -142,7 +151,7 @@ margin-left: 5%;
     width: 70vw;
     height: 25px;
     margin-top: 10px;
-    font-size: 4vw;
+    font-size: 1.17em;
 }
 
 #restaurant p{
@@ -156,9 +165,9 @@ margin-left: 5%;
 }
 
 #restaurant figcaption i{
-    font-size: 6vw;
-    height: 48px;
-    margin-top: 15px;
+    font-size: 2.17em;
+    padding-top: 13px;
+    padding-bottom: 21px;
 }
 
 #restaurant .restaurant_new{
@@ -169,12 +178,11 @@ margin-left: 5%;
     left: 65%;
     top: 50px;
     color: #0a8d6d;
-    font-size: 4vw;
+    font-size: 1.17em;
 }
 /*pied de page*/
 
 footer{
-    margin-top: 50px;
     background-color: #353535;
     padding-left: 5%;
     padding-top: 5%;
@@ -184,7 +192,7 @@ footer h2{
     font-family: 'shrikhand';
     font-weight:lighter;
     color: white;
-    font-size: 5vw;
+    font-size: 1.5em;
     margin: 0%;
 }
 
@@ -196,5 +204,43 @@ footer ul li{
     list-style-type: none;
     color: white;
     margin-top: 10px;
-    font-size: 4vw;
+    font-size: 1em;
+}
+/*version ordinateur*/
+
+@media screen and (min-width: 1024px)
+{
+
+.function ul{
+    display: flex;
+    margin: 0%;
+}
+
+.function ul li{
+    width: 22vw;
+    margin-left: 5%;
+}
+
+#restaurant .choice{
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 2%;
+}
+
+#restaurant figure{
+margin-left: 60px;
+width: 40vw;
+}
+
+#restaurant img{
+width: 40vw;
+}
+
+#restaurant h3{
+    width: 32vw;
+}
+
+#restaurant .restaurant_new{
+    width: 10vw;
+}
 }
