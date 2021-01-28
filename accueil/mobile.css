@@ -21,6 +21,11 @@ a{
     padding: 2%;
 }
 
+.header_logo{
+    box-shadow: 0 0 0.5rem grey;
+    position: relative;
+}
+
 
 header p{
     background-color: #eaeaea;
@@ -28,7 +33,6 @@ header p{
     padding-bottom:15px;
     text-align: center;
     margin: 0%;
-    box-shadow: inset 0px 0px 5px;
     font-size: 1.2em;
 }
 
@@ -52,10 +56,6 @@ header p{
     text-align: center;
 }
 
-.presentation a{
-    text-decoration: none;
-}
-
 .presentation button{
     display: block;
     margin: auto;
@@ -65,8 +65,16 @@ header p{
     border-radius: 25px;
     color: white;
     border: #f6f6f6;
+    cursor: pointer;
     background: linear-gradient(#FF79DA,#9356DC);
+    transition: 0.2s;
 }
+
+button:hover{
+box-shadow: 1px 1px  10px rgba(0,0,0,.5);
+filter: brightness(110%)
+}
+
 
 /*fonctionnement*/
 
@@ -206,6 +214,7 @@ footer ul li{
     margin-top: 10px;
     font-size: 1em;
 }
+
 /*version ordinateur*/
 
 @media screen and (min-width: 1024px)
