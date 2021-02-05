@@ -76,12 +76,29 @@ h1 i{
     padding-bottom: 5px;
 }
 
-.main_heart{
+i[class="far fa-heart"]{
     position: absolute;
     font-size: 2em;
     top: 37px;
     right: 7%;
     border: 0px solid;
+}
+
+i[class="fas fa-heart"]{
+    position: absolute;
+    font-size: 2.10em;
+    top: 37px;
+    right: 6.9%;
+    border: 0px solid;
+    opacity: 0;
+    cursor: pointer;
+}
+
+i[class="fas fa-heart"]:hover{
+    opacity: 1;
+    background: linear-gradient(#FF79DA,#9356DC);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
 }
 
 /*repas*/
@@ -96,9 +113,11 @@ h1 i{
     width: 89vw;
     margin-left: 5%;
     background-color: white;
+    overflow: hidden;
+    cursor: pointer;
 }
 
-.starters_meal :nth-child(1), .course_meal :nth-child(1), .dessert_meal :nth-child(1){
+.description :nth-child(1), .description :nth-child(1), .description :nth-child(1){
     font-weight: bold;
 }
 
@@ -108,18 +127,59 @@ h1 i{
     width: 75vw;
     height: 20px;
     margin-top: 9px;
+}
 
+.description{
+flex: 1;
+overflow: hidden;
 }
 
 .price{
-    height: 20;
     margin-top: 9px;
     font-weight: bold;
+    display: flex;
+    align-items: flex-end;
+}
+
+.valid{
+    background-color: #99e2d0;
+    margin: -1.8em -3rem 0.2em 1.7rem;
+    width: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-duration: .4s;
+}
+
+.icon_valid{
+    height: 1.6rem;
+    width: 1.6rem;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    transform: rotate(180deg);
+    transition-duration: .5s;
+}
+
+i[class*="check"]{
+    color: #99e2d0;
+}
+
+.starters_meal:hover .icon_valid, .course_meal:hover .icon_valid, .dessert_meal:hover .icon_valid{
+    transform: rotate(0deg);
+}
+
+.starters_meal:hover .valid, .course_meal:hover .valid, .dessert_meal:hover .valid{
+    width: 4rem;
+    margin: 0rem;
+    margin-left: 10px;
 }
 
 /*btn commander*/
 
-.main_validate{
+button{
     width: 43vw;
     display: block;
     margin: auto;
@@ -130,6 +190,13 @@ h1 i{
     border-radius: 25px;
     border: #f6f6f6;
     box-shadow: 1px 1px 10px grey;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover{
+    box-shadow: 1px 1px  10px rgba(0,0,0,.5);
+    filter: brightness(110%)
 }
 
 /*pied de page*/
@@ -163,6 +230,63 @@ footer i{
     margin-right: 10px;
 }
 
+footer a{
+    color: white;
+    text-decoration: none;
+}
+
+/*ANIMATION DE LA PAGE*/
+
+@keyframes start{
+    from{
+        opacity: 0;
+        margin-bottom: 50px;
+    }
+    to{
+        opacity: 1;
+        margin-bottom: 30px;
+    }
+}
+
+.main_starters :nth-child(2){
+    animation: start 1s 30ms;
+    ;
+}
+
+.main_starters :nth-child(3){
+    animation: start 1s 60ms;
+}
+
+.main_starters :nth-child(4){
+    animation: start 1s 90ms;
+}
+
+.main_course :nth-child(2){
+    animation: start 1s 30ms;
+}
+
+.main_course :nth-child(3){
+    animation: start 1s 60ms;
+}
+
+.main_course :nth-child(4){
+    animation: start 1s 90ms;
+}
+
+.main_dessert :nth-child(2){
+    animation: start 1s 30ms;
+}
+
+.main_dessert :nth-child(3){
+    animation: start 1s 60ms;
+}
+
+.main_dessert :nth-child(4){
+    animation: start 1s 90ms;
+}
+
+/* version ordinateur*/
+
 @media screen and (min-width: 1024px)
 {
    .choice{
@@ -171,17 +295,19 @@ footer i{
    }
 
    .starters_meal, .course_meal, .dessert_meal{
-    width: 29vw;
-    margin-left: 36px;
+    width: 31vw;
+    margin-left: 17px;
     height: 87px;
    }
 
-   .starters_meal :nth-child(1), .course_meal :nth-child(1), .dessert_meal :nth-child(1){
+   .description :nth-child(1){
        margin-top: 10px;
    }
 
    .meal{
-       width: 24vw;
-       margin-top: 0%;
+    width: 96%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
    }
 }
