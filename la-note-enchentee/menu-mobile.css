@@ -28,6 +28,7 @@ header h1{
     margin: 0%;
     font-size: 2em;
     text-align: center;
+    font-family: 'Shrikhand', cursive;
 }
 
 header i{
@@ -56,13 +57,14 @@ main{
 
 /* titre principal*/
 
-h1{
+h2{
 font-family: 'Shrikhand', cursive;
 font-size: 2em;
 margin-left: 5%;
+width: 78vw;
 }
 
-h1 i{
+h2 i{
     margin-left: 30%;
 }
 
@@ -79,16 +81,16 @@ h1 i{
 i[class="far fa-heart"]{
     position: absolute;
     font-size: 2em;
-    top: 37px;
-    right: 7%;
+    top: 43px;
+    right: 6.5%;
     border: 0px solid;
 }
 
 i[class="fas fa-heart"]{
     position: absolute;
-    font-size: 2.10em;
-    top: 37px;
-    right: 6.9%;
+    font-size: 2.20em;
+    top: 41px;
+    right: 6.5%;
     border: 0px solid;
     opacity: 0;
     cursor: pointer;
@@ -124,9 +126,12 @@ i[class="fas fa-heart"]:hover{
 .meal{
     margin: 0%;
     margin-left: 2%;
-    width: 75vw;
     height: 20px;
     margin-top: 9px;
+    width: 96%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 .description{
@@ -206,7 +211,7 @@ footer{
     padding-top: 5%;
     height: 200px;
 }
-footer h2{
+footer h3{
     font-family: 'shrikhand';
     font-weight:lighter;
     color: white;
@@ -305,12 +310,5 @@ footer a{
 
    .description :nth-child(1){
        margin-top: 10px;
-   }
-
-   .meal{
-    width: 96%;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
    }
 }
